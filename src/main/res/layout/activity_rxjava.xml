@@ -9,26 +9,60 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.heyongjian.application.RxjavaActivity">
+    tools:context="com.heyongjian.application.RxJavaActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true" android:layout_marginLeft="12dp" android:layout_marginStart="12dp"
-        android:layout_marginTop="17dp" android:text="Button"/>
+    <LinearLayout android:id="@+id/ll"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="base"/>
+            <Button
+                android:id="@+id/buttonMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="with map"/>
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" print schedule"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/subscribeOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="subscribeOn"/>
+            <Switch
+                android:id="@+id/switchObservableOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="observableOn"/>
+            <Button
+                android:id="@+id/clean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="clean"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+    </LinearLayout>
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" android:layout_below="@+id/button"
-        android:layout_marginTop="24dp" android:ems="10" android:inputType="textMultiLine"/>
-    <Button
-        android:id="@+id/buttonMap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:layout_alignTop="@+id/button"
-        android:layout_marginLeft="13dp" android:layout_marginStart="13dp" android:layout_toEndOf="@+id/button"
-        android:layout_toRightOf="@+id/button" android:text="Button"/>
+        android:layout_alignLeft="@+id/ll" android:layout_alignStart="@+id/ll"
+        android:layout_below="@+id/ll"
+        android:ems="10"
+        android:focusable="false"
+        android:editable="false"
+        android:inputType="textMultiLine"/>
+
+
 </RelativeLayout>
